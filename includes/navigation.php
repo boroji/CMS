@@ -15,23 +15,23 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-            <?php 
-            
-            $query = "SELECT * FROM categories";
-            $result = mysqli_query($connection, $query);
+                <?php
 
-            while ($row = mysqli_fetch_assoc($result)) {
-                $title = $row['cat_title'];
+                $query = "SELECT * FROM categories";
+                $result = mysqli_query($connection, $query);
 
-                echo "<li><a href='#'>{$title}</a></li>";
-            }
-            
-            ?>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row['cat_title'];
 
+                    echo "<li><a href='#'>{$title}</a></li>";
+                }
 
-                <!-- <li>
-                    <a href="#">About</a>
+                ?>
+
+                <li>
+                    <a href="admin/index.php">Admin</a>
                 </li>
+                <!--
                 <li>
                     <a href="#">Services</a>
                 </li>
