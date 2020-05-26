@@ -33,7 +33,7 @@
                                 $query = "INSERT INTO categories(cat_title) VALUE('$user_add') ";
                                 $add_result = mysqli_query($connection, $query);
 
-                                if(!$add_result) {
+                                if (!$add_result) {
                                     die(mysqli_error($connection));
                                 }
                             }
@@ -49,6 +49,16 @@
                                 <input type="submit" class="btn btn-primary" name="mySubmit" value="Add">
                             </div>
                         </form>
+
+                        <?php 
+                        
+                        if (isset($_GET['edit'])) {
+                            $cat_id = $_GET['edit'];
+
+                            include "includes/update.php";
+                        }
+                        
+                        ?>
                     </div>
 
                     <div class="col-xs-6">
@@ -57,11 +67,13 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Categories</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-
+                                // adding the category
                                 $query = "SELECT * FROM categories";
                                 $category_result_admin = mysqli_query($connection, $query);
 
@@ -71,10 +83,24 @@
                                     echo "  <tr>
                                                 <td>{$category_id}</td>
                                                 <td>{$category_title}</td>
+                                                <td><a href='categories.php?edit={$category_id}'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></a></td>
+                                                <td><a href='categories.php?delete={$category_id}'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a></td>
                                             </tr>";
                                 }
 
                                 ?>
+
+                                <?php
+                                // deleting the category
+                                if (isset($_GET['delete'])) {
+                                    $delete_id = $_GET['delete'];
+                                    $query = "DELETE FROM categories WHERE cat_id = {$delete_id}";
+                                    $category_delete = mysqli_query($connection, $query);
+                                    header("Location: categories.php");
+                                }
+                                ?>
+
+
 
                             </tbody>
                         </table>
