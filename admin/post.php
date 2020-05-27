@@ -31,28 +31,40 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
-                        <?php 
-                        
-                        if (isset($_GET['source'])) {
-                            $source = $_GET['source'];
-                        } else {
-                            $source = "";
-                        }
 
-                        switch ($source) {
-                            case 'add_post':
-                                include "./includes/add_post.php";
-                                break;
-                            
-                            default:
-                                include "view_posts.php";
-                                break;
-                        }
+                            <?php
 
-                        ?>
-                    
-                            
+                            if (isset($_GET['source'])) {
+                                $source = $_GET['source'];
+                            } else {
+                                $source = "";
+                            }
+
+                            switch ($source) {
+                                case 'add_post':
+                                    include "./includes/add_post.php";
+                                    break;
+
+                                default:
+                                    include "view_posts.php";
+                                    break;
+                            }
+
+                            ?>
+
+                            <?php
+
+
+                            if (isset($_GET['delete'])) {
+                                $delete_post = $_GET['delete'];
+                                $query = "DELETE FROM posts WHERE post_id = {$delete_post}";
+                                $post_result = mysqli_query($connection, $query);
+                            }
+
+
+                            ?>
+
+
                         </tbody>
                     </table>
 
