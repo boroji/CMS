@@ -24,6 +24,7 @@ while($fetch_post = mysqli_fetch_assoc($post_result)) {
         <td>{$post_tags}</td>
         <td>{$post_comment}</td>
         <td>{$post_date}</td>
+        <td><a href='post.php?source=edit_post&p_id={$post_id}'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></a></td>
         <td><a href='post.php?delete={$post_id}'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a></td>
     </tr>
     ";
