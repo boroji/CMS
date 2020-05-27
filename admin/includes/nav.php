@@ -44,7 +44,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-file"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="posts_dropdown" class="collapse">
                     <li>
-                        <a href="#">View Posts</a>
+                        <a href="post.php">View Posts</a>
                     </li>
                     <li>
                         <a href="#">Add Posts</a>
