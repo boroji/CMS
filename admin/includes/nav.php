@@ -35,7 +35,7 @@
                 <a href="#"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-edit"></i> Comments</a>
+                <a href="comments.php"><i class="fa fa-fw fa-edit"></i> Comments</a>
             </li>
             <li>
                 <a href="categories.php"><i class="fa fa-fw fa-table"></i> Categories</a>
