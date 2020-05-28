@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.php">CMS Admin</a>
+        <a class="navbar-brand" href="../index.php">Go back to CMS</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
