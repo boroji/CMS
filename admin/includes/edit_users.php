@@ -29,7 +29,11 @@ if (isset($_POST['user_update'])) {
     $query .= "WHERE user_id = $edit_user_id ";
 
     $edit_query = mysqli_query($connection, $query);
-    header("Location: users.php");
+    echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                Username <strong>$user_name</strong> has been successfully updated
+        </div>";
+
 }
 
 ?>

@@ -10,6 +10,11 @@ if (isset($_POST['user_add'])) {
     $user_result = mysqli_query($connection, $query);
 
     checkQuery($user_result);
+
+    echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                Username <strong>$user_name</strong> has been successfully created
+        </div>";
 }
 
 ?>

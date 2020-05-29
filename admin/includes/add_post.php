@@ -19,8 +19,10 @@ if (isset($_POST['create_post'])) {
     $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content,post_tags,post_status) VALUES({$post_category_id},'{$post_title}','{$post_author}', now(),'{$post_image}','{$post_content}','{$post_tags}', '{$post_status}')";
 
     $create_post_query = mysqli_query($connection, $query);
-
-    checkQuery($create_post_query);
+    echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                <strong>$post_title</strong> post has successfully been created by <strong>$post_author</strong>
+        </div>";
 }
 
 ?>

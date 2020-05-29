@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2020 at 06:30 AM
+-- Generation Time: May 29, 2020 at 10:32 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -66,7 +66,7 @@ INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comm
 (9, 17, 'Sandy', 'test@test.com', 'I also love coffee too', 'approved', '2020-05-28'),
 (10, 16, 'cindy', 'test@test.com', 'this is amazing', 'approved', '2020-05-28'),
 (11, 16, 'Sandy', 'test@test.com', 'you are right, this is amazing', 'approved', '2020-05-28'),
-(12, 19, 'Mimo', 'test@test.com', 'Soooooooo white wow', 'approved', '2020-05-28'),
+(12, 19, 'Mimo', 'test@test.com', 'Soooooooo white wow', 'unapproved', '2020-05-28'),
 (13, 16, 'Roxanne', 'myemail@test.com', 'This is soooooo cool', 'unapproved', '2020-05-28');
 
 -- --------------------------------------------------------
@@ -121,9 +121,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_name`, `user_email`) VALUES
-(1, 'sandy', '123', 'sandy rashford', 'test@gmail.com'),
+(1, 'sandy', '123', 'Sandy Rashford', 'test@gmail.com'),
 (3, 'cindy', '123456', 'Cindy James', 'test2@test.com'),
-(6, 'Jodie', '101010', 'Jodie Bryant', 'test@gmail.com');
+(8, 'james', '123', 'James Smith', 'test@test.com');
 
 --
 -- Indexes for dumped tables
@@ -161,7 +161,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `comments`
@@ -173,13 +173,13 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -55,7 +55,10 @@ if (isset($_POST['update_post'])) {
 
     $update_post = mysqli_query($connection, $query);
 
-    checkQuery($update_post);
+    echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                <strong>$post_title</strong> post has successfully been updated by <strong>$post_author</strong>
+        </div>";
 
 }
 
@@ -66,7 +69,7 @@ if (isset($_POST['update_post'])) {
 
     <div class="form-group">
         <label for="title">Title</label>
-        <input value="<?php echo $post_id; ?>" type="text" class="form-control" name="title">
+        <input value="<?php echo $post_title; ?>" type="text" class="form-control" name="title">
     </div>
 
     <div class="form-group">
