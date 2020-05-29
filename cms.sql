@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2020 at 10:55 PM
+-- Generation Time: May 29, 2020 at 06:30 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -37,9 +37,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
-(2, 'architecture'),
-(5, 'tea'),
-(14, 'coffee');
+(2, 'Architecture'),
+(5, 'Herbal Tea'),
+(14, 'Dark Coffee'),
+(28, 'Design');
 
 -- --------------------------------------------------------
 
@@ -62,12 +63,9 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comment_email`, `comment_content`, `comment_status`, `comment_date`) VALUES
-(1, 10, 'Hossein', 'test@test.com', 'wow thats cool', 'unapprove', '2020-05-20'),
-(4, 9, 'Sandy', 'test@test.com', 'I love you', 'approved', '2020-05-28'),
-(7, 9, 'cindy', 'test@test.com', 'i love you even more', 'approved', '2020-05-28'),
 (9, 17, 'Sandy', 'test@test.com', 'I also love coffee too', 'approved', '2020-05-28'),
 (10, 16, 'cindy', 'test@test.com', 'this is amazing', 'approved', '2020-05-28'),
-(11, 16, 'Sandy', 'test@test.com', 'you are right, this is amazing', 'unapproved', '2020-05-28'),
+(11, 16, 'Sandy', 'test@test.com', 'you are right, this is amazing', 'approved', '2020-05-28'),
 (12, 19, 'Mimo', 'test@test.com', 'Soooooooo white wow', 'approved', '2020-05-28'),
 (13, 16, 'Roxanne', 'myemail@test.com', 'This is soooooo cool', 'unapproved', '2020-05-28');
 
@@ -123,7 +121,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_name`, `user_email`) VALUES
-(1, 'sandy', '123456789987654321', 'sandy rashford', 'test@gmail.com'),
+(1, 'sandy', '123', 'sandy rashford', 'test@gmail.com'),
 (3, 'cindy', '123456', 'Cindy James', 'test2@test.com'),
 (6, 'Jodie', '101010', 'Jodie Bryant', 'test@gmail.com');
 
@@ -163,7 +161,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `comments`
