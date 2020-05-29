@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2020 at 10:32 PM
+-- Generation Time: May 29, 2020 at 11:09 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -93,14 +93,14 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_counts`, `post_status`) VALUES
-(16, 2, 'design', 'Architecture', '2020-05-28', 'architecture.jpg', 'This is amazing building', 'Architecture', 3, 'Draft'),
-(17, 14, 'Coffee is the Best', 'Coffee lover', '2020-05-28', 'coffee.jpg', 'I like dark coffee        \r\n                \r\n        ', 'coffee', 1, 'Draft'),
-(19, 2, 'digital', 'Architecture', '2020-05-28', 'architecture-.jpg', 'This is white', 'white', 1, 'published'),
+(16, 2, 'design', 'Architecture', '2020-05-29', 'architecture.jpg', '<p>&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;</p><ul><li>Odit&nbsp;perferendis&nbsp;sint</li><li>&nbsp;explicabo,&nbsp;libero&nbsp;enim&nbsp;saepe</li><li>&nbsp;natus&nbsp;accusamus&nbsp;repudiandae.&nbsp;Maiores&nbsp;q</li><li>uia&nbsp;id&nbsp;aliquam&nbsp;molestiae&nbsp;sint.</li></ul>', 'Architecture', 3, 'Draft'),
+(17, 2, 'Coffee is the Best', 'Coffee lover', '2020-05-29', 'coffee.jpg', '<p>&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;</p><ol><li>consectetur,&nbsp;<strong>adipisicinusamus&nbsp;</strong>quia&nbsp;officii</li><li>atque&nbsp;exercit<em>ationem&nbsp;eaque,&nbsp;na</em>tus</li><li>&nbsp;accusamus<strong>&nbsp;repudiandae.</strong>&nbsp;Maiores&nbsp;quia&nbsp;id&nbsp;aliquam&nbsp;molestiae&nbsp;sint.</li></ol>', 'coffee', 1, 'Draft'),
+(19, 2, 'digital', 'Architecture', '2020-05-29', 'architecture-.jpg', '<p><em><strong>&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;c</strong></em></p><ol><li>onsectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;Odit&nbsp;perfer</li><li>endis&nbsp;sint&nbsp;explicabo,&nbsp;l<ol><li>ibencidunt&nbsp;deleniti.&nbsp;V</li></ol></li><li>olupta<strong>tem&nbsp;om</strong>nis&nbsp;unde&nbsp;ullam&nbsp;placeat!</li><li>s&nbsp;repudia<strong>nda</strong>e.&nbsp;Maior<em><strong>es&nbsp;quia&nbsp;id&nbsp;a</strong></em>liqua</li><li>m&nbsp;molestiae&nbsp;sint.</li></ol>', 'white', 1, 'published'),
 (20, 2, 'MTM 1526', 'Architecture', '2020-05-28', 'architecture-2.jpg', 'Sky is blue or white ?', 'Sky', 0, 'Draft'),
 (21, 14, 'Lonely Coffee', 'Coffee lover', '2020-05-28', 'coffee-2.jpg', 'I like coffee a lot        \r\n                \r\n        ', 'coffee', 0, 'Draft'),
 (22, 14, 'Group Coffee', 'Coffee lover', '2020-05-28', 'coffee-3.jpg', 'we drink coffee toegther.        \r\n                \r\n        ', 'group of friends', 0, 'Draft'),
 (23, 5, 'Herbal tea', 'TeaBie', '2020-05-28', 'tea-2.jpg', 'This is amazing tea', 'Herbal', 0, 'Draft'),
-(24, 5, 'Blue Tea', 'TeaBie', '2020-05-28', 'tea-3.jpg', 'I love tea with sugar         ', 'Tea lover', 0, 'published');
+(24, 2, 'Blue Tea', 'TeaBie', '2020-05-29', 'tea-3.jpg', '<p>I <strong>love tea</strong> with sugar</p>', 'Tea lover', 0, 'published');
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `users`

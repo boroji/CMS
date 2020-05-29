@@ -32,6 +32,7 @@
     <![endif]-->
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="//cdn.ckeditor.com/4.14.0/basic/ckeditor.js"></script>
 </head>
 
 <body>
