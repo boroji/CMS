@@ -54,7 +54,36 @@ if (isset($_SESSION['username'])) {
 
                             <div class="form-group">
                                 <label for="user_password">Password</label>
-                                <input value="<?php echo $user_password; ?>" type="text" class="form-control" name="user_password">
+                                <input value="<?php echo $user_password; ?>" type="password" class="form-control" name="user_password">
+                            </div>
+
+                            <?php
+
+
+                            if (isset($_POST['save_user'])) {
+                                $user_name = $_POST['username'];
+                                $user_fullname = $_POST['user_name'];
+                                $user_email = $_POST['user_email'];
+                                $user_password = $_POST['user_password'];
+
+                                $query = "UPDATE users SET ";
+                                $query .= "username = '{$user_name}', ";
+                                $query .= "user_name = '{$user_fullname}', ";
+                                $query .= "user_password = '{$user_password}', ";
+                                $query .= "user_email = '{$user_email}' ";
+                                $query .= "WHERE user_id = $user_id ";
+
+                                $edit_query = mysqli_query($connection, $query);
+                                echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                        Username <strong>$user_name</strong> has been successfully updated
+                                </div>";
+                            }
+                            
+                            ?>
+
+                            <div class="form-group">
+                                <input class="btn btn-success" type="submit" name="save_user" value="Save">
                             </div>
 
                         </form>

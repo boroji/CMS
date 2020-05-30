@@ -33,6 +33,10 @@ if (isset($_POST['login'])) {
         
     } else if($username !== $db_user_name && $password !== $db_user_password) {
         header("Location: ../index.php");
+    } else if (empty($username) || empty($password)) {
+        header("Location: ../index.php");
+    } else if ($username === ' ' || $password === ' ') {
+        header("Location: ../index.php");
     } else {
         header("Location: ../index.php");
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2020 at 11:09 PM
+-- Generation Time: May 30, 2020 at 09:23 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -122,7 +122,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_name`, `user_email`) VALUES
 (1, 'sandy', '123', 'Sandy Rashford', 'test@gmail.com'),
-(3, 'cindy', '123456', 'Cindy James', 'test2@test.com'),
+(3, 'cindy', '123', 'Cindy James', 'test2@test.com'),
 (8, 'james', '123', 'James Smith', 'test@test.com');
 
 --
